@@ -9,30 +9,149 @@ html, body {
   padding: 0;
 }
 
-.carousel-inner img {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+#home {
+  background: url(/img/webback.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.navbar {
-  border-bottom: 2px solid gold;
-  background-color: #504747;
+.segments {
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Great Vibes', cursive;
 }
 
-.navbar-nav {
-  color: #000000;
+
+#content {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
 }
 
-.stripes {
-  border: 2px solid gold;
+#home-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-#message {
-  border: 2px solid #ffffff;
-  height: auto;
+#home-page nav{
+  position: fixed;
+  top:0;
+  width: 100%;
 }
 
+#intro-details{
+  color: #5b2c6f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Great Vibes', cursive;
+  z-index: 25;
+}
+
+#intro-details #man {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+#intro-details #wedded {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+#intro-details #woman {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+#intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+} 
+
+.home_list {
+  text-decoration: none;
+  color: #330066;
+  font-family: 'Charm', cursive;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.home_list:hover {
+  text-decoration: none;
+  color: #4a235a;
+}
+
+.rounders {
+  width: 200px;
+  border-radius: 3px;
+  font-size: 5px;
+  border: 0.5px solid #6c3483;
+  z-index: 12;
+}
+
+@media (max-width: 576px){
+  #intro-details {
+    font-size: 30px;
+  }
+  .rounders {
+    font-size: 15px;
+    padding: .7em .15em;
+  }
+}
+
+@media (min-width: 576px){
+  #intro-details {
+    font-size: 50px;
+  }
+  .rounders {
+    font-size: 20px;
+    padding: .25rem .1rem;
+  }
+}
+
+@media (min-width: 768px){
+  #intro-details {
+    font-size: 120px;
+  }
+  .rounders {
+    font-size: 20px;
+    padding: .25rem .25rem;
+  }
+}
+
+#story {
+  margin-top: 20px;
+  position: relative;
+}
+
+#message .them {
+  padding: 0 100px;
+  font-size: 60px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Charm', cursive;
+  opacity: 0.6;
+  color: #eaecee;
+  background-color: #330066;
+  border: 1px solid #daa520;
+  border-radius: 5px;
+  z-index: 10;  
+}
+
+.them .him::first-letter {
+  font-size: 80px;
+}
+
+.them .her::first-letter {
+  font-size: 80px;
+}
 .coupling {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,22 +172,16 @@ html, body {
 }
 
 #groom {
-  color: #504747;
+  color: #ffd700;
 }
 
-.him {
-  color: #000000;
-  border: 1px solid #ffd700;
-  margin: 0 1px;
-}
-
-.her {
-  color: #000000;
-  border: 1px solid #504747;
-  margin: 0 1px;
+#wedding {
+  width: 100%;
+  margin-top: 40px;
 }
 
 .wall {
+  margin-top: 20px;
   display: -ms-flexbox;
   /* IE10 */
   display: -webkit-box;
@@ -134,46 +247,62 @@ html, body {
           transform: scale(1.1);
 }
 
-.wedding-updates {
+info-centre {
+  margin-top: 5px;
+  position: relative;
+  background-color: #eaecee;
+}
+
+.info-group {
+  display: flex;
   float: left;
-  margin: 10px 0;
-  border: none;
+  margin: 40px 50px 20px 50px;
 }
 
-.info-container {
-  border: 1px solid #000000;
-  border-radius: 75px;
-  width: 150px;
-  height: 150px;
-  margin: 15px auto;
+.main-detail {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.info-group .info-bubble{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  float: left;
+  border-radius: 50%;
+  background-color:  #fff;
+}
+
+.info-group .info-bubble svg {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 7px;
+  left: 7px;
+  margin: 5px;
+}
+
+.main-detail .bubble-tag {
   text-align: center;
-  background-color: #000000;
+  font-size: 10px;
+  font-weight: 700;
 }
 
-.clickable {
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
+.info-message .liner {
+  width: 400px;
+  position: relative;
+  top: 20px;
+  border: 2px solid #6c3483;
 }
 
-.info-center {
-  font-size: 30px;
-  padding: 4px auto;
-}
-
-.fa-users {
-  color: #504747;
-  margin-top: 30px;
-}
-
-.fa-money-bill-alt {
-  color: #008000;
-  margin-top: 30px;
-}
-
-.fa-user-check {
-  color: #daa520;
-  margin-top: 30px;
+.info-message .inner-message {
+  font-family: 'Charm', cursive;
+  position: relative;
+  top: 10px;
+  left: 80px;
+  width: 300px;
+  height: 20px;
 }
 
 #map {
