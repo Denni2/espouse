@@ -72,8 +72,12 @@ Barba.Pjax.getTransition = function () {
 
 
 let innerId = document.getElementById('img1');
-getImg(innerId);
 
+function getImg (vals){
+    alert("This is a funny day" + vals);
+}
+
+function getImg(innerId);
 
 // wedding area 
 
